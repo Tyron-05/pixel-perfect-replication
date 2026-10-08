@@ -61,7 +61,6 @@ function Nav() {
           <a href="#faq" className="hover:text-foreground">FAQ</a>
         </nav>
         <div className="flex items-center gap-3">
-          <a href="#try" className="hidden text-sm font-medium sm:block">Sign in</a>
           <a href="#try" className={btnPrimary + " py-2"}>Try AI Free</a>
         </div>
       </div>
