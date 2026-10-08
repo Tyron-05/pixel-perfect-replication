@@ -292,7 +292,7 @@ function PlannerTool() {
     { t: "Launch and share announcement", p: "Low", e: "2h", d: "Week 3", done: false },
   ]));
   const color = { High: "bg-destructive/10 text-destructive", Medium: "bg-secondary text-secondary-foreground", Low: "bg-success/10 text-success" };
-  const move = (i: number, dir: number) => setTasks((ts) => { const n = [...ts]; const j = i + dir; if (j < 0 || j >= n.length) return ts; [n[i], n[j]] = [n[j], n[i]]; return n; });
+  const move = (i: number, dir: number) => setTasks((ts) => { const n = [...ts]; const j = i + dir; if (j < 0 || j >= n.length) return ts; const tmp = n[i]!; n[i] = n[j]!; n[j] = tmp; return n; });
   return (
     <div className="space-y-5">
       <Field label="What do you want to achieve?">
